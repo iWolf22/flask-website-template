@@ -39,7 +39,6 @@
 /* Experiences Section Styles */
 .experiences-section {
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  min-height: 100vh;
   padding: 80px 0;
   color: white;
   font-family: 'Inter', sans-serif;
@@ -222,36 +221,36 @@
   .experiences-section {
     padding: 60px 0;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
   }
-  
+
   .experience-item {
     flex-direction: column;
     gap: 20px;
     padding: 30px 0;
   }
-  
+
   .experience-logo {
     width: 60px;
     height: 60px;
   }
-  
+
   .experience-logo img {
     width: 40px;
     height: 40px;
   }
-  
+
   .experience-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .experience-date {
     align-self: flex-start;
   }
-  
+
   .experience-company h3 {
     font-size: 1.5rem;
   }
@@ -261,19 +260,19 @@
   .section-title {
     font-size: 2rem;
   }
-  
+
   .experience-item {
     padding: 25px 0;
   }
-  
+
   .experience-company h3 {
     font-size: 1.3rem;
   }
-  
+
   .company-name {
     font-size: 1rem;
   }
-  
+
   .experience-description p {
     font-size: 1rem;
   }
