@@ -5,6 +5,15 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
+about_info = {
+    "name": "Jenny Cheng",
+    "bio": "I'm a software engineer passionate about AI and full-stack development.",
+    "location": "San Francisco, CA",
+    "title": ["Software Engineer", "Software Developer"],
+    "interests": ["AI", "Web Dev", "Hackathons", "Startups"],
+    "photo_url": "/static/img/logo.jpg",
+}
+
 experiences_data = [
     {
         "job_title": "Senior Software Engineer",
@@ -60,6 +69,7 @@ def index():
     return render_template(
         "index.html",
         title="MLH Fellow",
+        about_info=about_info,
         experiences=experiences_data,
         education=education_data,
         url=os.getenv("URL"),
