@@ -25,91 +25,10 @@
 
 <body>
 	{% include 'navbar.html' %}
-	{% include "about.html" %}
-
-	<div class="experiences-section">
-		<div class="container">
-			<div class="experiences-header">
-				<h1 class="section-title">Experiences</h1>
-				<p class="section-subtitle">
-					My professional journey in technology
-				</p>
-			</div>
-
-			<div class="experiences-list">
-				{% for job in experiences %}
-				<div class="experience-item">
-					<div class="experience-logo">
-						<img src="{{ job.company_logo }}" alt="{{ job.company_name }}" />
-					</div>
-					<div class="experience-content">
-						<div class="experience-header">
-							<div class="experience-company">
-								<h3>{{ job.job_title }}</h3>
-								<p class="company-name">
-									{{ job.company_name }}
-								</p>
-								<p class="company-location">
-									📍 {{ job.location }}
-								</p>
-							</div>
-							<div class="experience-date">
-								<span>{{ job.date }}</span>
-							</div>
-						</div>
-						<div class="experience-description">
-							<p>{{ job.description }}</p>
-							<div class="tech-stack">
-								{% for technology in job.tech_stack %}
-								<span class="tech-tag">{{ technology }}</span>
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-
-	<!-- Education Section -->
-	<div class="experiences-section">
-		<div class="container">
-			<div class="experiences-header">
-				<h1 class="section-title">Education</h1>
-				<p class="section-subtitle">My academic background</p>
-			</div>
-
-			<div class="experiences-list">
-				{% for edu in education %}
-				<div class="experience-item">
-					<div class="experience-logo">
-						<img src="{{ edu.institution_logo }}" alt="{{ edu.institution_name }}" />
-					</div>
-					<div class="experience-content">
-						<div class="experience-header">
-							<div class="experience-company">
-								<h3>{{ edu.degree }}</h3>
-								<p class="company-name">
-									{{ edu.institution_name }}
-								</p>
-								<p class="company-location">
-									📍 {{ edu.location }}
-								</p>
-							</div>
-							<div class="experience-date">
-								<span>{{ edu.date }}</span>
-							</div>
-						</div>
-						<div class="experience-description">
-							<p>{{ edu.description }}</p>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
+	{% include 'about.html' %}
+	{% include 'experiences.html' %}
+	{% include 'visited.html' %}
+	{% include 'footer.html' %}
 </body>
 <script src="/static/js/theme-toggle.js"></script>
 

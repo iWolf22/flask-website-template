@@ -1,14 +1,8 @@
 .about-section {
-  background: #f3ecff;
+  background: var(--bg-section);
   padding: 80px 0;
-  color: white;
+  color: var(--text);
   font-family: 'Inter', sans-serif;
-}
-
-.about-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .about-header {
@@ -22,14 +16,6 @@
   font-weight: 700;
 }
 
-.section-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
-  color: #b0b0b0;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-}
-
 .about-me-row {
     min-height: 200px;
     display: flex;
@@ -40,7 +26,6 @@
 }
 
 .about-me-image {
-  height: 100%; 
   min-height: 150px;
   max-height: 300px;
   flex-shrink: 0;
@@ -49,7 +34,7 @@
   overflow: hidden;
   border-radius: 50%;
   background: rgba(51, 45, 130, 0.1);
-  border: 1px solid rgba(107, 99, 255, 0.3);
+  border: 1px solid var(--border);
   margin-right: 40px;
 }
 
@@ -61,6 +46,7 @@
   border-radius: 50% !important;
   padding: 0 !important;
   margin: 0 auto !important;
+  transition: all 0.3s ease;
 }
 
 .about-me-image img:hover {
@@ -83,15 +69,14 @@
   font-weight: 700;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #332d82 0%, #6b63ff 100%);
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent-soft) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .about-location {
-  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
-  color: #b0b0b0;
+  color: var(--text-light);
   margin: 0.5rem 0;
   display: flex;
   align-items: center;
@@ -99,19 +84,16 @@
 }
 
 .about-title {
-  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #6b63ff;
+  color: var(--accent-soft);
   margin: 0.5rem 0;
 }
 
-
 .about-bio {
-  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #b0b0b0;
+  color: var(--text-light);
   margin: 1rem 0;
 }
 
