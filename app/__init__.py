@@ -63,6 +63,14 @@ education_data = [
     },
 ]
 
+hobbies = [
+    {'name': 'Foodie', 'image': '/static/img/food.jpg', 'color': '#B39DDB', 'label': 'Foodie'},
+    {'name': 'Driving', 'image': '/static/img/drive.jpg', 'color': '#9575CD', 'label': 'Driving'},
+    {'name': 'Tech', 'image': 'wifi.png', 'color': '#7E57C2', 'label': 'Tech'},
+    {'name': 'Design', 'color': '#673AB7', 'label': 'Design'},
+    {'name': 'Fitness', 'image': '/static/img/gym.jpg', 'color': '#5E35B1', 'label': 'Fitness'},
+    {'name': 'Cafe', 'color': '#512DA8', 'label': 'Coffee Time'},
+]
 
 @app.route("/")
 def index():
@@ -72,5 +80,6 @@ def index():
         about_info=about_info,
         experiences=experiences_data,
         education=education_data,
+        hobby_data=hobbies,
         url=os.getenv("URL"),
     )

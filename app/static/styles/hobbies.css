@@ -1,0 +1,98 @@
+.hobbies-section {
+  padding: 40px 0;
+}
+
+.hobbies-header {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+
+.hobby-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  align-items: start;
+  text-align: center;
+}
+
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Shared tile styles */
+.hobby-tile {
+  height: 140px;  
+  width: 160px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+}
+
+/* Image case */
+.hobby-tile.bordered {
+  border: 4px solid;
+  background-color: #fff;
+}
+
+.hobby-tile.bordered img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hobby-tile.bordered:hover img {
+  transform: scale(1.05);
+}
+
+/* Solid block case */
+.hobby-tile.solid {
+  color: white;
+  border: 4px solid transparent;
+  font-weight: bold;
+  width: 160px;
+  height: 140px;
+  background-color: transparent;
+}
+
+/* Label styles */
+.hobby-label.below {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--text-light);
+}
+
+.hobby-label.centered {
+  text-align: center;
+  padding: 8px;
+}
+
+.color-fill {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobby-tile.solid .hobby-label.centered {
+  transition: transform 0.3s ease;
+}
+
+.hobby-tile.solid:hover .hobby-label.centered {
+  transform: scale(1.05);
+}

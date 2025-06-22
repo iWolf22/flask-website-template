@@ -1,0 +1,27 @@
+<section class="hobbies-section">
+    <div class="container">
+        <div class="hobbies-header">
+            <h1 class="section-title">Hobbies</h1>
+            <p class="section-subtitle">Some things I enjoy outside of work :)</p>
+        </div>
+
+        <div class="hobby-grid">
+            {% for hobby in hobby_data %}
+            <div class="hobby-item">
+                {% if hobby.image %}
+                <div class="hobby-tile bordered" style="border-color: {{ hobby.color }}">
+                    <img src="{{ hobby.image}}" alt="{{ hobby.name }}" onerror="this.onerror=null; this.src='/static/img/fallback.jpg';">
+                </div>
+                <p class="hobby-label below">{{ hobby.label }}</p>
+                {% else %}
+                <div class="hobby-tile solid" style="border: 4px solid {{ hobby.color }};">
+                    <div class="color-fill" style="background-color: {{ hobby.color }};">
+                        <p class="hobby-label centered">{{ hobby.label }}</p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
