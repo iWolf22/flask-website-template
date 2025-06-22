@@ -1,27 +1,58 @@
-<section id="hobbies" class="hobbies-section">
-    <div class="container">
-        <div class="hobbies-header">
-            <h1 class="section-title">Hobbies</h1>
-            <p class="section-subtitle">Some things I enjoy outside of work :)</p>
-        </div>
+<!DOCTYPE html data-theme="dark">
+<html lang="en">
 
-        <div class="hobby-grid">
-            {% for hobby in hobby_data %}
-            <div class="hobby-item">
-                {% if hobby.image %}
-                <div class="hobby-tile bordered" style="border-color: {{ hobby.color }}">
-                    <img src="{{ hobby.image}}" alt="{{ hobby.name }}" onerror="this.onerror=null; this.src='/static/img/fallback.jpg';">
-                </div>
-                <p class="hobby-label below">{{ hobby.label }}</p>
-                {% else %}
-                <div class="hobby-tile solid" style="border: 4px solid {{ hobby.color }};">
-                    <div class="color-fill" style="background-color: {{ hobby.color }};">
-                        <p class="hobby-label centered">{{ hobby.label }}</p>
-                    </div>
-                </div>
-                {% endif %}
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta property="og:title" content="Personal Portfolio" />
+	<meta property="og:description" content="My Personal Portfolio" />
+	<meta property="og:url" content="{{ url }}" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+
+	<link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+	<link rel="stylesheet" href="./static/styles/navbar.css">
+	<link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./static/styles/hobbies.css" />
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=light_mode,moon_stars" />
+</head>
+
+<body>
+	{% include 'navbar.html' %}
+	<section id="hobbies" class="hobbies-section">
+		<div class="container">
+			<div class="hobbies-header">
+				<h1 class="section-title">Hobbies</h1>
+				<p class="section-subtitle">Some things I enjoy outside of work :)</p>
+			</div>
+	
+			<div class="hobby-grid">
+				{% for hobby in hobby_data %}
+				<div class="hobby-item">
+					{% if hobby.image %}
+					<div class="hobby-tile bordered" style="border-color: {{ hobby.color }}">
+						<img src="{{ hobby.image}}" alt="{{ hobby.name }}" onerror="this.onerror=null; this.src='/static/img/fallback.jpg';">
+					</div>
+					<p class="hobby-label below">{{ hobby.label }}</p>
+					{% else %}
+					<div class="hobby-tile solid" style="border: 4px solid {{ hobby.color }};">
+						<div class="color-fill" style="background-color: {{ hobby.color }};">
+							<p class="hobby-label centered">{{ hobby.label }}</p>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	{% include 'footer.html' %}
+</body>
+<script src="/static/js/theme-toggle.js"></script>
+
+</html>
