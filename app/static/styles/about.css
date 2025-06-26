@@ -26,10 +26,9 @@
 }
 
 .about-me-image {
-  min-height: 150px;
-  max-height: 300px;
+  height: 300px;
+  width: 300px;
   flex-shrink: 0;
-  height: auto;
   aspect-ratio: 1/1 !important;
   overflow: hidden;
   border-radius: 50%;
