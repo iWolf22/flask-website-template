@@ -176,10 +176,15 @@ def index():
 def hobbies_route():
     return render_template(
         "hobbies.html",
-        title="Joshua Dierickse",
+        title="Joshua Dierickse - Hobbies",
         hobby_data=hobbies,
         url=os.getenv("URL"),
     )
+
+
+@app.route("/timeline")
+def timeline():
+    return render_template("timeline.html", title="Joshua Dierickse - Timeline")
 
 
 @app.route("/api/timeline_post", methods=["POST"])

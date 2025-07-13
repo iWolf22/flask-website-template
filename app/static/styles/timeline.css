@@ -1,0 +1,113 @@
+/* Timeline Page Styles */
+.timeline-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: var(--bg-card);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px var(--border);
+  padding: 2.5rem 2rem;
+  max-width: 700px;
+}
+
+.timeline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.timeline-form label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline-form input,
+.timeline-form textarea {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-section);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  transition: border 0.2s;
+}
+
+.timeline-form input:focus,
+.timeline-form textarea:focus {
+  border: 1.5px solid var(--accent);
+  outline: none;
+}
+
+.timeline-form button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.timeline-form button:hover {
+  background: var(--accent-soft);
+}
+
+.timeline-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-post {
+  background: var(--bg-section);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 1px 6px var(--border);
+  border: 1px solid var(--border);
+}
+
+.timeline-post-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-post-name {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.timeline-post-email {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.timeline-post-date {
+  color: var(--text-hover);
+  font-size: 0.95rem;
+  margin-left: auto;
+}
+
+.timeline-post-content {
+  color: var(--text);
+  font-size: 1.08rem;
+  margin-top: 0.2rem;
+  white-space: pre-line;
+}
+
+@media (max-width: 700px) {
+  .timeline-container {
+    padding: 1.2rem 0.5rem;
+  }
+} 
