@@ -40,3 +40,6 @@ class TestTimelinePost(unittest.TestCase):
         )
         assert second_post.id == 2
         # TODO: Get timeline posts and assert that they are correct
+        response = self.client.get("/api/timeline_post")
+        json_data = response.get_json()
+        assert len(json_data["timeline_posts"]) == 2
