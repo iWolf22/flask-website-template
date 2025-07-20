@@ -5,6 +5,19 @@ from peewee import *
 import datetime
 from playhouse.shortcuts import model_to_dict
 
+if os.getenv("TESTING") == "true":
+    print("Running in test mode")
+    mydb = SqliteDatabase("file:memory?mode=memory&cache=shared", uri=True)
+else:
+    mydb = MySQLDatabase(
+        os.getenv("MYSQL_DATABASE"),
+        user=os.getenv("MYSQL_USER"),
+        password=os.getenv("MYSQL_PASSWORD"),
+        host=os.getenv("MYSQL_HOST"),
+        port=3306,
+    )
+
+
 load_dotenv()
 app = Flask(__name__)
 mydb = MySQLDatabase(
@@ -189,6 +202,10 @@ def timeline():
 
 @app.route("/api/timeline_post", methods=["POST"])
 def post_time_line_post():
+    required_fields = ["name", "email", "content"]
+    for field in required_fields:
+        if field not in request.form:
+            return f"Bad Request: Missing required field: {field}", 400
     return model_to_dict(
         TimelinePost.create(
             name=request.form["name"],
