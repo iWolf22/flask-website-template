@@ -1,18 +1,12 @@
 #!/bin/bash
 
 PROJECT_DIR="/root/flask-website-template"
-VENV_DIR="python3-virtualenv"
 
-tmux kill-server
-
-cd "$PROJECT_DIR"
+cd "$PROJECT_DIR" || exit
 
 git fetch
 git checkout joshua-dierickse
 git reset origin/joshua-dierickse --hard
 
-source "$VENV_DIR/bin/activate"
-
-pip install -r requirements.txt
-
-systemctl restart myportfolio
+docker compose -f docker-compose.prod.yml down
+docker compose -f docker-compose.prod.yml up -d --build
