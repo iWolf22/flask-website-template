@@ -48,7 +48,7 @@ about_info = {
     "location": "Waterloo, Ontario, Canada",
     "title": ["Software Engineer"],
     "interests": ["AI", "Web Dev", "Linux", "Startups"],
-    "photo_url": "https://media.licdn.com/dms/image/v2/D4E03AQGFONK6GQyKTw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709684324180?e=2147483647&v=beta&t=xRyIB-jwikbRnIAw1czP_LCluHiQ41rYPt5qJr8FWL0",
+    "photo_url": "https://media.licdn.com/dms/image/v2/D4E03AQF7_B2sAPvrMg/profile-displayphoto-scale_200_200/B4EZgllzMHH8AY-/0/1752977323236?e=2147483647&v=beta&t=KnIzWgzmISiWL8HB8wuC4_AuEC7mv4ZGIPX57o018sE",
 }
 
 experiences_data = [
