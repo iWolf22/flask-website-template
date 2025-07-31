@@ -2,6 +2,9 @@
 
 import unittest
 from peewee import *
+import os
+
+os.environ["TESTING"] = "true"
 
 from app import TimelinePost
 
@@ -42,12 +45,12 @@ class TestTimelinePost(unittest.TestCase):
         # TODO: Get timeline posts and assert that they are correct
         all_posts = list(TimelinePost.select())
         assert len(all_posts) == 2
-        
+
         # Test the content of the posts
         assert all_posts[0].name == "John Doe"
         assert all_posts[0].email == "john@example.com"
         assert all_posts[0].content == "Hello world, I'm John!"
-        
+
         assert all_posts[1].name == "Jane Doe"
         assert all_posts[1].email == "jane@example.com"
         assert all_posts[1].content == "Hello world, I'm Jane!"
