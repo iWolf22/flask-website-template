@@ -21,7 +21,6 @@ else:
 
 app = Flask(__name__)
 
-
 class TimelinePost(Model):
     name = CharField()
     email = CharField()
